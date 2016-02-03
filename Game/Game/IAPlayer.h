@@ -14,6 +14,8 @@
 
 -(void) jump;
 
+-(void)land;
+
 -(void) start;
 
 -(void) stop;

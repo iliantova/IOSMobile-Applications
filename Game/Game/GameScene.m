@@ -158,7 +158,22 @@
 
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
-    [self gameOver];
+    if ([contact.bodyA.node.name isEqualToString:@"ground"] || [contact.bodyB.node.name isEqualToString:@"ground"]) {
+        [player land];
+    }else
+    {
+        [self gameOver];
+    }
+    
+}
+
+-(void)animateWithPulse: (SKNode *)node
+{
+    SKAction *disappear = [SKAction fadeAlphaTo:0.0 duration:(0.6)];
+    SKAction *appeare = [SKAction fadeAlphaTo:0.1 duration:(0.6)];
+    SKAction *pulse = [SKAction sequence:@[disappear, appeare]];
+    [node runAction:[SKAction repeatActionForever:pulse]];
+    
 }
 
 -(void)update:(CFTimeInterval)currentTime {

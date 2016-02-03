@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C31C60BE9400AA504D /* IAPlayer.m */; };
-		BFE836C61C60EC1B00AA504D /* RcArrb4cL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE836C51C60EC1B00AA504D /* RcArrb4cL.jpg */; };
 		BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C81C60FF8100AA504D /* IAWorldGenerator.m */; };
 		BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836CB1C61558C00AA504D /* IAPointLabel.m */; };
+		BFE836CE1C62315D00AA504D /* RcArrb4cL.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFE836CD1C62315D00AA504D /* RcArrb4cL.jpg */; };
 		BFFAFD221C5FB8BD00E58E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFAFD211C5FB8BD00E58E9A /* main.m */; };
 		BFFAFD251C5FB8BD00E58E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFAFD241C5FB8BD00E58E9A /* AppDelegate.m */; };
 		BFFAFD281C5FB8BD00E58E9A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BFFAFD271C5FB8BD00E58E9A /* GameScene.m */; };
@@ -24,11 +24,11 @@
 /* Begin PBXFileReference section */
 		BFE836C21C60BE9400AA504D /* IAPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPlayer.h; sourceTree = "<group>"; };
 		BFE836C31C60BE9400AA504D /* IAPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPlayer.m; sourceTree = "<group>"; };
-		BFE836C51C60EC1B00AA504D /* RcArrb4cL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = RcArrb4cL.jpg; path = ../../RcArrb4cL.jpg; sourceTree = "<group>"; };
 		BFE836C71C60FF8100AA504D /* IAWorldGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWorldGenerator.h; sourceTree = "<group>"; };
 		BFE836C81C60FF8100AA504D /* IAWorldGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAWorldGenerator.m; sourceTree = "<group>"; };
 		BFE836CA1C61558C00AA504D /* IAPointLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPointLabel.h; sourceTree = "<group>"; };
 		BFE836CB1C61558C00AA504D /* IAPointLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPointLabel.m; sourceTree = "<group>"; };
+		BFE836CD1C62315D00AA504D /* RcArrb4cL.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = RcArrb4cL.jpg; path = ../../../../RcArrb4cL.jpg; sourceTree = "<group>"; };
 		BFFAFD1D1C5FB8BD00E58E9A /* Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFAFD211C5FB8BD00E58E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFFAFD231C5FB8BD00E58E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,11 +58,11 @@
 		BFE836C11C60BD3E00AA504D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BFE836CD1C62315D00AA504D /* RcArrb4cL.jpg */,
 				BFE836CA1C61558C00AA504D /* IAPointLabel.h */,
 				BFE836CB1C61558C00AA504D /* IAPointLabel.m */,
 				BFE836C71C60FF8100AA504D /* IAWorldGenerator.h */,
 				BFE836C81C60FF8100AA504D /* IAWorldGenerator.m */,
-				BFE836C51C60EC1B00AA504D /* RcArrb4cL.jpg */,
 				BFE836C21C60BE9400AA504D /* IAPlayer.h */,
 				BFE836C31C60BE9400AA504D /* IAPlayer.m */,
 			);
@@ -173,8 +173,8 @@
 				BFFAFD2A1C5FB8BD00E58E9A /* GameScene.sks in Resources */,
 				BFFAFD351C5FB8BD00E58E9A /* LaunchScreen.storyboard in Resources */,
 				BFFAFD321C5FB8BD00E58E9A /* Assets.xcassets in Resources */,
+				BFE836CE1C62315D00AA504D /* RcArrb4cL.jpg in Resources */,
 				BFFAFD301C5FB8BD00E58E9A /* Main.storyboard in Resources */,
-				BFE836C61C60EC1B00AA504D /* RcArrb4cL.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
