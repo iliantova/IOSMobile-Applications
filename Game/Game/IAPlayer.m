@@ -44,22 +44,24 @@ static const uint32_t starsCategori = 0x1 << 3;
     picture.position = CGPointMake(0, 10);
     [player addChild:picture];
     player.name = @"player";
-    player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:player.size];
+    player.zPosition = 15;
+    player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(player.size.width -6, player.size.height - 6)];
     player.physicsBody.allowsRotation = NO;
     player.physicsBody.categoryBitMask = playerCategory;
+    player.physicsBody.collisionBitMask = groundCategory | obstacleCategory;
     player.physicsBody.contactTestBitMask = obstacleCategory | groundCategory | starsCategori;
     return player;
 }
 
 -(void)start {
-    SKAction *incrementsMove = [SKAction moveByX:1.0 y:0 duration:0.01];
+    SKAction *incrementsMove = [SKAction moveByX:1.0 y:0 duration:0.007];
     SKAction *move = [SKAction repeatActionForever:incrementsMove];
     [self runAction:move];
 }
 
 -(void)jump {
     if (!self.isJump) {
-        [self.physicsBody applyImpulse:CGVectorMake(0, 200)];
+        [self.physicsBody applyImpulse:CGVectorMake(0, 110)];
         self.isJump = YES;
     }
 }

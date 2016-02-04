@@ -8,6 +8,7 @@
 
 #import "IAWorldGenerator.h"
 #import "IAStars.h"
+#import "IAObtacle.h"
 
 @interface IAWorldGenerator ()
 @property double currentGroundX;
@@ -20,15 +21,18 @@
 
 @implementation IAWorldGenerator
 
-static const uint32_t obstacleCategory = 0x1 << 1;
+
 static const uint32_t groundCategory = 0x1 << 2;
 IAStars *stars;
+IAObtacle *obtacleWheel;
+IAObtacle *obtaclePuddle;
 
 +(id) generatorWithWorld: (SKNode *) world
 {
     IAWorldGenerator *generator = [IAWorldGenerator node];
     generator.currentGroundX = 0;
     generator.currentObstacleX = 400;
+    generator.currentStarsX = 500;
     generator.world = world;
     return generator;
 }
@@ -41,8 +45,14 @@ IAStars *stars;
 }
 -(void)generate
 {
-    SKSpriteNode *ground = [SKSpriteNode spriteNodeWithColor:[UIColor greenColor] size: CGSizeMake(self.scene.frame.size.width, 100)];
+    [self starsGenerate];
+    
+    //todo methot
+    
+    SKSpriteNode *ground = [SKSpriteNode spriteNodeWithImageNamed:@"images.jpeg" normalMapped:YES];
+    ground.size = CGSizeMake(self.scene.frame.size.width, 100);
     ground.name = @"ground";
+    ground.zPosition = -50;
     ground.position = CGPointMake(self.currentGroundX, -self.scene.frame.size.height/2 + ground.size.height/2);
     ground.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:ground.size];
     ground.physicsBody.categoryBitMask = groundCategory;
@@ -51,17 +61,30 @@ IAStars *stars;
     
     self.currentGroundX += ground.frame.size.width;
     
-    SKSpriteNode *obtacle = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(20, 30)];
-    obtacle.name = @"obstacle";
-    obtacle.position = CGPointMake(self.currentObstacleX, ground.position.y + ground.frame.size.height/2 + obtacle.frame.size.height/2);
-    obtacle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:obtacle.size];
-    obtacle.physicsBody.categoryBitMask = obstacleCategory;
-    obtacle.physicsBody.dynamic = NO;
-    [self.world addChild:obtacle];
+    int randomval = rand() % 2;
     
-    self.currentObstacleX += 250;
-    [self starsGenerate];
-    self.currentStarsX += 300;
+    if ((BOOL)randomval){
+        obtacleWheel = [IAObtacle obtacleWithWheelImage];
+        obtacleWheel.position = CGPointMake(self.currentObstacleX, ground.position.y + ground.frame.size.height +obtacleWheel.frame.size.height/4);
+        
+        [self.world addChild:obtacleWheel];
+    }
+    else {
+        obtaclePuddle = [IAObtacle obtacleWithPuddleImage];
+        obtaclePuddle.position = CGPointMake(self.currentObstacleX, ground.position.y + ground.frame.size.height/2 -obtaclePuddle.frame.size.height/2);
+        
+        [self.world addChild:obtaclePuddle];
+    }
+    
+    //todo metod make
+    
+    int lowerBound = 300;
+    int upperBound = 700;
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    
+    self.currentObstacleX += rndValue;
+    self.currentStarsX += rndValue + 200;
+    
 
 }
 

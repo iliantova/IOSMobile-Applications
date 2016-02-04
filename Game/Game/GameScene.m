@@ -49,11 +49,13 @@
      
      self.physicsWorld.contactDelegate = self;
      
-     SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"maxresdefault.jpg" normalMapped:YES];
-     background.name = @"ground";
-     background.position = CGPointMake(0, 150);
-     [world addChild:background];
+
      
+     SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"maxresdefault.jpg" normalMapped:YES];
+     background.name = @"background";
+     background.size = self.size;
+     background.zPosition = -100;
+     [self addChild:background];
      
      world = [SKNode node];
      [self addChild:world];
@@ -69,6 +71,8 @@
      pointsLabel.position = CGPointMake(0, 100);
      [self addChild:pointsLabel];
      
+  
+
     //[self addChild:myLabel];
 }
 

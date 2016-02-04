@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
+		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
+		BFE7F9041C63BB770037A5A6 /* puddle.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9031C63BB770037A5A6 /* puddle.png */; };
+		BFE7F9071C63DA530037A5A6 /* IAObtacle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F9061C63DA530037A5A6 /* IAObtacle.m */; };
+		BFE7F9091C63DE830037A5A6 /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9081C63DE830037A5A6 /* wheel.png */; };
 		BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C31C60BE9400AA504D /* IAPlayer.m */; };
 		BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C81C60FF8100AA504D /* IAWorldGenerator.m */; };
 		BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836CB1C61558C00AA504D /* IAPointLabel.m */; };
@@ -29,6 +33,11 @@
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
+		BFE7F9011C63B52C0037A5A6 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../../Downloads/images.jpeg; sourceTree = "<group>"; };
+		BFE7F9031C63BB770037A5A6 /* puddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = puddle.png; path = ../../../../Downloads/puddle.png; sourceTree = "<group>"; };
+		BFE7F9051C63DA530037A5A6 /* IAObtacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAObtacle.h; sourceTree = "<group>"; };
+		BFE7F9061C63DA530037A5A6 /* IAObtacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAObtacle.m; sourceTree = "<group>"; };
+		BFE7F9081C63DE830037A5A6 /* wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheel.png; path = ../../../wheel.png; sourceTree = "<group>"; };
 		BFE836C21C60BE9400AA504D /* IAPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPlayer.h; sourceTree = "<group>"; };
 		BFE836C31C60BE9400AA504D /* IAPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPlayer.m; sourceTree = "<group>"; };
 		BFE836C71C60FF8100AA504D /* IAWorldGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWorldGenerator.h; sourceTree = "<group>"; };
@@ -76,6 +85,8 @@
 				BFE836C31C60BE9400AA504D /* IAPlayer.m */,
 				BFE7F8FC1C636B490037A5A6 /* IAStars.h */,
 				BFE7F8FD1C636B490037A5A6 /* IAStars.m */,
+				BFE7F9051C63DA530037A5A6 /* IAObtacle.h */,
+				BFE7F9061C63DA530037A5A6 /* IAObtacle.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 		BFFAFD141C5FB8BD00E58E9A = {
 			isa = PBXGroup;
 			children = (
+				BFE7F9081C63DE830037A5A6 /* wheel.png */,
+				BFE7F9031C63BB770037A5A6 /* puddle.png */,
+				BFE7F9011C63B52C0037A5A6 /* images.jpeg */,
 				BFE836D11C62D28C00AA504D /* maxresdefault.jpg */,
 				BFFAFD1F1C5FB8BD00E58E9A /* Game */,
 				BFFAFD1E1C5FB8BD00E58E9A /* Products */,
@@ -186,11 +200,14 @@
 			files = (
 				BFFAFD2A1C5FB8BD00E58E9A /* GameScene.sks in Resources */,
 				BFFAFD351C5FB8BD00E58E9A /* LaunchScreen.storyboard in Resources */,
+				BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */,
+				BFE7F9041C63BB770037A5A6 /* puddle.png in Resources */,
 				BFFAFD321C5FB8BD00E58E9A /* Assets.xcassets in Resources */,
 				BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */,
 				BFE836CE1C62315D00AA504D /* RcArrb4cL.jpg in Resources */,
 				BFE836D21C62D28C00AA504D /* maxresdefault.jpg in Resources */,
 				BFE836D01C62CC8E00AA504D /* spirit.atlas in Resources */,
+				BFE7F9091C63DE830037A5A6 /* wheel.png in Resources */,
 				BFFAFD301C5FB8BD00E58E9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +225,7 @@
 				BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */,
 				BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */,
 				BFFAFD251C5FB8BD00E58E9A /* AppDelegate.m in Sources */,
+				BFE7F9071C63DA530037A5A6 /* IAObtacle.m in Sources */,
 				BFFAFD281C5FB8BD00E58E9A /* GameScene.m in Sources */,
 				BFFAFD221C5FB8BD00E58E9A /* main.m in Sources */,
 			);
