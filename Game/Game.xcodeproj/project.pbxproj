@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
+		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C31C60BE9400AA504D /* IAPlayer.m */; };
 		BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836C81C60FF8100AA504D /* IAWorldGenerator.m */; };
 		BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE836CB1C61558C00AA504D /* IAPointLabel.m */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
+		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
 		BFE836C21C60BE9400AA504D /* IAPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPlayer.h; sourceTree = "<group>"; };
 		BFE836C31C60BE9400AA504D /* IAPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPlayer.m; sourceTree = "<group>"; };
 		BFE836C71C60FF8100AA504D /* IAWorldGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAWorldGenerator.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		BFFAFD1F1C5FB8BD00E58E9A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				BFE7F8FF1C6382450037A5A6 /* stars.atlas */,
 				BFE836CF1C62CC8E00AA504D /* spirit.atlas */,
 				BFE836C11C60BD3E00AA504D /* Model */,
 				BFFAFD231C5FB8BD00E58E9A /* AppDelegate.h */,
@@ -184,6 +187,7 @@
 				BFFAFD2A1C5FB8BD00E58E9A /* GameScene.sks in Resources */,
 				BFFAFD351C5FB8BD00E58E9A /* LaunchScreen.storyboard in Resources */,
 				BFFAFD321C5FB8BD00E58E9A /* Assets.xcassets in Resources */,
+				BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */,
 				BFE836CE1C62315D00AA504D /* RcArrb4cL.jpg in Resources */,
 				BFE836D21C62D28C00AA504D /* maxresdefault.jpg in Resources */,
 				BFE836D01C62CC8E00AA504D /* spirit.atlas in Resources */,

@@ -10,4 +10,6 @@
 
 @interface IAStars : SKSpriteNode
 
++(id)stars;
+
 @end

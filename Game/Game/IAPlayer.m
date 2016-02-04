@@ -19,6 +19,7 @@
 static const uint32_t playerCategory = 0x1 << 0;
 static const uint32_t obstacleCategory = 0x1 << 1;
 static const uint32_t groundCategory = 0x1 << 2;
+static const uint32_t starsCategori = 0x1 << 3;
 
 
 +(id)player
@@ -46,7 +47,7 @@ static const uint32_t groundCategory = 0x1 << 2;
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:player.size];
     player.physicsBody.allowsRotation = NO;
     player.physicsBody.categoryBitMask = playerCategory;
-    player.physicsBody.contactTestBitMask = obstacleCategory | groundCategory;
+    player.physicsBody.contactTestBitMask = obstacleCategory | groundCategory | starsCategori;
     return player;
 }
 
@@ -58,7 +59,7 @@ static const uint32_t groundCategory = 0x1 << 2;
 
 -(void)jump {
     if (!self.isJump) {
-        [self.physicsBody applyImpulse:CGVectorMake(0, 100)];
+        [self.physicsBody applyImpulse:CGVectorMake(0, 200)];
         self.isJump = YES;
     }
 }

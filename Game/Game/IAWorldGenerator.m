@@ -7,10 +7,13 @@
 //
 
 #import "IAWorldGenerator.h"
+#import "IAStars.h"
 
 @interface IAWorldGenerator ()
 @property double currentGroundX;
 @property double currentObstacleX;
+@property double currentStarsX;
+@property double currentStarsY;
 @property SKNode *world;
 
 @end
@@ -19,6 +22,7 @@
 
 static const uint32_t obstacleCategory = 0x1 << 1;
 static const uint32_t groundCategory = 0x1 << 2;
+IAStars *stars;
 
 +(id) generatorWithWorld: (SKNode *) world
 {
@@ -56,6 +60,29 @@ static const uint32_t groundCategory = 0x1 << 2;
     [self.world addChild:obtacle];
     
     self.currentObstacleX += 250;
+    [self starsGenerate];
+    self.currentStarsX += 300;
+
 }
+
+-(void) starsGenerate
+{
+    
+    for (int i=0; i<2; i++) {
+        stars = [IAStars stars];
+        stars.position = CGPointMake(self.currentStarsX, self.world.frame.size.height/2 + self.currentStarsY);
+          self.currentStarsX += 30;
+          self.currentStarsY += 10;
+        [self.world addChild:stars];
+    }
+    for (int i=0; i<3; i++) {
+        stars = [IAStars stars];
+        stars.position = CGPointMake(self.currentStarsX, self.world.frame.size.height/2 + self.currentStarsY);
+        self.currentStarsX += 30;
+        self.currentStarsY -= 10;
+        [self.world addChild:stars];
+    }
+    self.currentStarsY = 0;
+    }
 
 @end

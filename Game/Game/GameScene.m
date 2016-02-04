@@ -52,7 +52,7 @@
      SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"maxresdefault.jpg" normalMapped:YES];
      background.name = @"ground";
      background.position = CGPointMake(0, 150);
-     [self addChild:background];
+    // [self addChild:background];
      
      
      world = [SKNode node];
