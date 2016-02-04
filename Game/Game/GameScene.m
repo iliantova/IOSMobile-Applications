@@ -52,7 +52,7 @@
      SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"maxresdefault.jpg" normalMapped:YES];
      background.name = @"ground";
      background.position = CGPointMake(0, 150);
-    // [self addChild:background];
+     [world addChild:background];
      
      
      world = [SKNode node];
@@ -75,7 +75,6 @@
 -(void)didSimulatePhysics
 {
     [self centerOnNode:player];
-    [self handlePoints];
     [self handleGenerator];
     [self handleCleanup];
     
@@ -110,7 +109,7 @@
     [self addChild:gameOverNode];
 }
 
--(void)handlePoints
+/*-(void)handlePoints
 {
     
     [world enumerateChildNodesWithName:@"obstacle" usingBlock:^(SKNode *node, BOOL *stop) {
@@ -119,7 +118,7 @@
             [pointsLabel increments];
         }
     }];
-}
+}*/
 
 -(void)handleGenerator
 {
@@ -166,11 +165,20 @@
 {
     if ([contact.bodyA.node.name isEqualToString:@"ground"] || [contact.bodyB.node.name isEqualToString:@"ground"]) {
         [player land];
-    }else
-    {
+    }else if ([contact.bodyA.node.name isEqualToString:@"obstacle"] || [contact.bodyB.node.name isEqualToString:@"obstacle"]) {
         [self gameOver];
+    }else if ([contact.bodyA.node.name isEqualToString:@"stars"]) {
+        SKNode *node = contact.bodyA.node;
+        IAPointLabel *pointsLabel = (IAPointLabel *) [self childNodeWithName:@"pointLabel"];
+        [pointsLabel increments];
+        [node removeFromParent];
     }
-    
+   else if ([contact.bodyB.node.name isEqualToString:@"stars"]) {
+       SKNode *node = contact.bodyB.node;
+       IAPointLabel *pointsLabel = (IAPointLabel *) [self childNodeWithName:@"pointLabel"];
+       [pointsLabel increments];
+    [node removeFromParent];
+     }
 }
 
 -(void)animateWithPulse: (SKNode *)node

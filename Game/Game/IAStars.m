@@ -33,7 +33,7 @@ static const uint32_t starsCategori = 0x1 << 3;
     stars.physicsBody.categoryBitMask = starsCategori;
     stars.physicsBody.dynamic = NO;
     
-    stars.name = @"star";
+    stars.name = @"stars";
     return stars;
 }
 
