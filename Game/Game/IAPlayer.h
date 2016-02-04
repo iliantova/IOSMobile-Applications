@@ -20,4 +20,6 @@
 
 -(void) stop;
 
++(NSMutableArray *)createWalkingSpirit: walkFrames;
+
 @end

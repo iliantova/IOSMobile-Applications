@@ -47,7 +47,7 @@ static const uint32_t groundCategory = 0x1 << 2;
     
     self.currentGroundX += ground.frame.size.width;
     
-    SKSpriteNode *obtacle = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(40, 70)];
+    SKSpriteNode *obtacle = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size: CGSizeMake(20, 30)];
     obtacle.name = @"obstacle";
     obtacle.position = CGPointMake(self.currentObstacleX, ground.position.y + ground.frame.size.height/2 + obtacle.frame.size.height/2);
     obtacle.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:obtacle.size];
