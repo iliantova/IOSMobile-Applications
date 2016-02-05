@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */; };
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFE712DE1C6516DA002C5BCB /* PhotoTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTakeViewController.h; sourceTree = "<group>"; };
+		BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTakeViewController.m; sourceTree = "<group>"; };
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
@@ -73,6 +76,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFE712DD1C651444002C5BCB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BFFAFD2B1C5FB8BD00E58E9A /* GameViewController.h */,
+				BFFAFD2C1C5FB8BD00E58E9A /* GameViewController.m */,
+				BFE712DE1C6516DA002C5BCB /* PhotoTakeViewController.h */,
+				BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		BFE836C11C60BD3E00AA504D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +128,7 @@
 		BFFAFD1F1C5FB8BD00E58E9A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				BFE712DD1C651444002C5BCB /* ViewController */,
 				BFE7F8FF1C6382450037A5A6 /* stars.atlas */,
 				BFE836CF1C62CC8E00AA504D /* spirit.atlas */,
 				BFE836C11C60BD3E00AA504D /* Model */,
@@ -122,8 +137,6 @@
 				BFFAFD261C5FB8BD00E58E9A /* GameScene.h */,
 				BFFAFD271C5FB8BD00E58E9A /* GameScene.m */,
 				BFFAFD291C5FB8BD00E58E9A /* GameScene.sks */,
-				BFFAFD2B1C5FB8BD00E58E9A /* GameViewController.h */,
-				BFFAFD2C1C5FB8BD00E58E9A /* GameViewController.m */,
 				BFFAFD2E1C5FB8BD00E58E9A /* Main.storyboard */,
 				BFFAFD311C5FB8BD00E58E9A /* Assets.xcassets */,
 				BFFAFD331C5FB8BD00E58E9A /* LaunchScreen.storyboard */,
@@ -221,6 +234,7 @@
 			files = (
 				BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */,
 				BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */,
+				BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */,
 				BFFAFD2D1C5FB8BD00E58E9A /* GameViewController.m in Sources */,
 				BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */,
 				BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */,
