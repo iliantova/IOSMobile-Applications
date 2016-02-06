@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */; };
+		BFE712E21C65597A002C5BCB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE712E11C65597A002C5BCB /* CoreData.framework */; };
+		BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */; };
+		BFE7130E1C656E6A002C5BCB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7130D1C656E6A002C5BCB /* LoginViewController.m */; };
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
@@ -33,6 +36,10 @@
 /* Begin PBXFileReference section */
 		BFE712DE1C6516DA002C5BCB /* PhotoTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTakeViewController.h; sourceTree = "<group>"; };
 		BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTakeViewController.m; sourceTree = "<group>"; };
+		BFE712E11C65597A002C5BCB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BFE7130A1C655E2D002C5BCB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BFE7130C1C656E6A002C5BCB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BFE7130D1C656E6A002C5BCB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE712E21C65597A002C5BCB /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +91,8 @@
 				BFFAFD2C1C5FB8BD00E58E9A /* GameViewController.m */,
 				BFE712DE1C6516DA002C5BCB /* PhotoTakeViewController.h */,
 				BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */,
+				BFE7130C1C656E6A002C5BCB /* LoginViewController.h */,
+				BFE7130D1C656E6A002C5BCB /* LoginViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -108,6 +118,7 @@
 		BFFAFD141C5FB8BD00E58E9A = {
 			isa = PBXGroup;
 			children = (
+				BFE712E11C65597A002C5BCB /* CoreData.framework */,
 				BFE7F9081C63DE830037A5A6 /* wheel.png */,
 				BFE7F9031C63BB770037A5A6 /* puddle.png */,
 				BFE7F9011C63B52C0037A5A6 /* images.jpeg */,
@@ -142,6 +153,7 @@
 				BFFAFD331C5FB8BD00E58E9A /* LaunchScreen.storyboard */,
 				BFFAFD361C5FB8BD00E58E9A /* Info.plist */,
 				BFFAFD201C5FB8BD00E58E9A /* Supporting Files */,
+				BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -240,7 +252,9 @@
 				BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */,
 				BFFAFD251C5FB8BD00E58E9A /* AppDelegate.m in Sources */,
 				BFE7F9071C63DA530037A5A6 /* IAObtacle.m in Sources */,
+				BFE7130E1C656E6A002C5BCB /* LoginViewController.m in Sources */,
 				BFFAFD281C5FB8BD00E58E9A /* GameScene.m in Sources */,
+				BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */,
 				BFFAFD221C5FB8BD00E58E9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +405,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFE7130A1C655E2D002C5BCB /* Model.xcdatamodel */,
+			);
+			currentVersion = BFE7130A1C655E2D002C5BCB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFFAFD151C5FB8BD00E58E9A /* Project object */;
 }

@@ -23,6 +23,47 @@
             </objects>
             <point key="canvasLocation" x="425.59999999999991" y="40.706666666666656"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="cQL-xk-rfC">
+            <objects>
+                <viewController id="cQV-cb-qz3" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70S-07-SGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="3q8-Zb-Pf1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JiZ-qV-YUb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbt-xS-lbP">
+                                <rect key="frame" x="64" y="107" width="131" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cn9-aA-bN9">
+                                <rect key="frame" x="74" y="167" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrF-vU-SZl">
+                                <rect key="frame" x="64" y="249" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="login:" destination="cQV-cb-qz3" eventType="touchUpInside" id="kZF-SW-3sC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nikName" destination="cn9-aA-bN9" id="xiI-iL-ZBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I4S-1x-ivY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170" y="109"/>
+        </scene>
         <!--Photo Take View Controller-->
         <scene sceneID="hNc-mX-cgr">
             <objects>
@@ -67,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXx-u1-NCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="40"/>
+            <point key="canvasLocation" x="261" y="-10"/>
         </scene>
     </scenes>
 </document>

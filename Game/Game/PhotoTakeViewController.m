@@ -7,6 +7,8 @@
 //
 
 #import "PhotoTakeViewController.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
 
 
 @interface PhotoTakeViewController ()
@@ -57,10 +59,47 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = chosenImage;
+    
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
+    
+    AppDelegate *cdHelper = [[AppDelegate alloc] init];
+
+    NSManagedObjectContext *context = [cdHelper managedObjectContext];
+
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"User" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+   
+    NSData *dataImage = UIImagePNGRepresentation(chosenImage);
+    
+    for (NSManagedObject *info in fetchedObjects) {
+         NSString *n = [info valueForKey:@"nikName"];
+       
+        if ( [n isEqualToString:@"hhh"]) {
+            [info setValue:dataImage forKey:@"picture"];
+            NSError *error;
+            if (![context save:&error]) {
+                NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+            }
+        }
+    }
+    UIImage *t;
+    [fetchRequest setEntity:entity];
+    
+    NSArray *fetchedObjects4 = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects4) {
+    NSString *n = [info valueForKey:@"nikName"];
+        if ( [n isEqualToString:@"hhh" ] ){
+            NSData *b = [info valueForKey:@"picture"];
+         t =  [UIImage imageWithData:b];
+    }
+    }
+    self.imageView.image = t;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
