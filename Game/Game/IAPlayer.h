@@ -22,4 +22,6 @@
 
 +(NSMutableArray *)createWalkingSpirit: walkFrames;
 
++(UIImage *) takeUserPicture;
+
 @end

@@ -19,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    UIImage *imageUser = [IAPlayer takeUserPicture];
+    
+    self.imageView.image = imageUser;
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,10 +83,13 @@
    
     NSData *dataImage = UIImagePNGRepresentation(chosenImage);
     
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    NSString *nikName = delegate.nikNameData;
+    
     for (NSManagedObject *info in fetchedObjects) {
          NSString *n = [info valueForKey:@"nikName"];
        
-        if ( [n isEqualToString:@"hhh"]) {
+        if ( [n isEqualToString:nikName]) {
             [info setValue:dataImage forKey:@"picture"];
             NSError *error;
             if (![context save:&error]) {
@@ -88,18 +97,8 @@
             }
         }
     }
-    UIImage *t;
-    [fetchRequest setEntity:entity];
     
-    NSArray *fetchedObjects4 = [context executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *info in fetchedObjects4) {
-    NSString *n = [info valueForKey:@"nikName"];
-        if ( [n isEqualToString:@"hhh" ] ){
-            NSData *b = [info valueForKey:@"picture"];
-         t =  [UIImage imageWithData:b];
-    }
-    }
-    self.imageView.image = t;
+    self.imageView.image = chosenImage;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

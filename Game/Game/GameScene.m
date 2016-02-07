@@ -25,7 +25,7 @@
     IAPlayer *player;
     SKNode *world;
     IAWorldGenerator *generator;
-   // IAPointLabel *pointsLabel;
+    //IAPointLabel *pointsLabel;
 }
 
 /*-(id)initWithSize:(CGSize)size{
@@ -105,13 +105,21 @@
 -(void)gameOver
 {
     self.isgameOver = YES;
+    
+    
     [player stop];
     
     SKLabelNode *gameOverNode = [SKLabelNode labelNodeWithFontNamed:@"Verdana"];
     gameOverNode.text = @"Over";
     gameOverNode.position = CGPointMake(0, 60);
     [self addChild:gameOverNode];
-}
+    
+    IAPointLabel *pointsLabel = (IAPointLabel *) [self childNodeWithName:@"pointLabel"];
+    
+    int p = pointsLabel.number;
+    [IAPointLabel setPonts: p];
+    
+   }
 
 /*-(void)handlePoints
 {

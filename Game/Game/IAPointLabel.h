@@ -14,7 +14,7 @@
 +(id)pointsLabelWithFontName:(NSString *) fontName;
 
 -(void)increments;
--(void) setPints: (int) points;
++(void) setPonts: (int) points;
 - (void) reset;
 
 

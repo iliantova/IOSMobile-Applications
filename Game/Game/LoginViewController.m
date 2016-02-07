@@ -39,22 +39,30 @@
     NSManagedObject *user = [NSEntityDescription
                                        insertNewObjectForEntityForName:@"User"
                                        inManagedObjectContext:context];
-    [user setValue:name forKey:@"nikName"];
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-  
     
+    NSError *error;
+    BOOL isExist = NO;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"User" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
     for (NSManagedObject *info in fetchedObjects) {
-        NSLog(@"Name: %@", [info valueForKey:@"nikName"]);
+        NSString *nnn = [info valueForKey:@"nikName"];
+        if ([nnn isEqualToString:name]) {
+            isExist = YES;
+        }
     }
-
     
+    if (!isExist) {
+        [user setValue:name forKey:@"nikName"];
+        
+        if (![context save:&error]) {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+    }
+    }
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    delegate.nikNameData = name;
 }
 @end

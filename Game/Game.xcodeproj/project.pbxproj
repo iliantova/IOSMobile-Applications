@@ -11,6 +11,7 @@
 		BFE712E21C65597A002C5BCB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE712E11C65597A002C5BCB /* CoreData.framework */; };
 		BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */; };
 		BFE7130E1C656E6A002C5BCB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7130D1C656E6A002C5BCB /* LoginViewController.m */; };
+		BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE713131C66A159002C5BCB /* PointsViewController.m */; };
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
@@ -40,6 +41,8 @@
 		BFE7130A1C655E2D002C5BCB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BFE7130C1C656E6A002C5BCB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BFE7130D1C656E6A002C5BCB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BFE713121C66A159002C5BCB /* PointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsViewController.h; sourceTree = "<group>"; };
+		BFE713131C66A159002C5BCB /* PointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsViewController.m; sourceTree = "<group>"; };
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */,
 				BFE7130C1C656E6A002C5BCB /* LoginViewController.h */,
 				BFE7130D1C656E6A002C5BCB /* LoginViewController.m */,
+				BFE713121C66A159002C5BCB /* PointsViewController.h */,
+				BFE713131C66A159002C5BCB /* PointsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */,
 				BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */,
 				BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */,
 				BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */,

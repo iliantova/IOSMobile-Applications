@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IAPlayer.h"
 
 @interface PhotoTakeViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (strong, nonatomic) IAPlayer *player;
 
 - (IBAction)takePhoto:(id)sender;
 

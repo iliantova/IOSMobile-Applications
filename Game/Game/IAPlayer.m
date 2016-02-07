@@ -7,6 +7,8 @@
 //
 
 #import "IAPlayer.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
 
 @interface IAPlayer()
 
@@ -40,12 +42,29 @@ static const uint32_t starsCategori = 0x1 << 3;
     player.yScale = 0.8;
 
     
-    SKSpriteNode *picture = [SKSpriteNode spriteNodeWithImageNamed:@"RcArrb4cL.jpg"];
-    picture.position = CGPointMake(0, 10);
-    [player addChild:picture];
+    UIImage *imageFromDB = [self takeUserPicture];
+    
+    SKTexture *userPicture = [SKTexture textureWithImage:imageFromDB];
+    //SKTexture *userPicture = [SKTexture textureWithImageNamed:@"puddle.png"];
+    SKSpriteNode *picture = [SKSpriteNode spriteNodeWithTexture:userPicture size:CGSizeMake(60, 60)];
+    picture.position = CGPointMake(0, picture.frame.size.height/2);
+    //picture.zPosition = 50;
+    
+    SKCropNode* cropNode = [SKCropNode node];
+    SKShapeNode* mask = [SKShapeNode node];
+    [mask setPath:CGPathCreateWithRoundedRect(CGRectMake(-30, 0, 60, 60), 30, 30, nil)];
+    
+    [mask setFillColor:[SKColor whiteColor]];
+    cropNode.zPosition = 100;
+    [cropNode setMaskNode:mask];
+    [cropNode addChild:picture];
+    
+
+    [player addChild:cropNode];
     player.name = @"player";
     player.zPosition = 15;
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(player.size.width -6, player.size.height - 6)];
+
     player.physicsBody.allowsRotation = NO;
     player.physicsBody.categoryBitMask = playerCategory;
     player.physicsBody.collisionBitMask = groundCategory | obstacleCategory;
@@ -85,6 +104,36 @@ static const uint32_t starsCategori = 0x1 << 3;
     }
     
     return walkFrames;
+}
+
++(UIImage *) takeUserPicture {
+
+    UIImage *takeImage;
+    
+    AppDelegate *cdHelper = [[AppDelegate alloc] init];
+    
+    NSManagedObjectContext *context = [cdHelper managedObjectContext];
+    
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    NSString *nikName = delegate.nikNameData;
+    
+    NSError *error;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"User" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSArray *fetchedObjects4 = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *info in fetchedObjects4) {
+        NSString *n = [info valueForKey:@"nikName"];
+        if ( [n isEqualToString:nikName ] ){
+            NSData *b = [info valueForKey:@"picture"];
+            takeImage =  [UIImage imageWithData:b];
+        }
+    }
+    
+    return takeImage;
 }
 
 
