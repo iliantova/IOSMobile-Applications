@@ -11,8 +11,11 @@
 		BFE712E21C65597A002C5BCB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE712E11C65597A002C5BCB /* CoreData.framework */; };
 		BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */; };
 		BFE7130E1C656E6A002C5BCB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7130D1C656E6A002C5BCB /* LoginViewController.m */; };
-		BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE713131C66A159002C5BCB /* PointsViewController.m */; };
 		BFE713171C67457A002C5BCB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE713161C67457A002C5BCB /* TableViewController.swift */; };
+		BFE7131B1C678F37002C5BCB /* IALabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7131A1C678F37002C5BCB /* IALabel.m */; };
+		BFE7131D1C67B4C3002C5BCB /* IAPointsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE7131C1C67B4C3002C5BCB /* IAPointsCell.xib */; };
+		BFE713201C67B730002C5BCB /* IAPointsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7131F1C67B730002C5BCB /* IAPointsCellView.m */; };
+		BFE713221C67DF01002C5BCB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE713211C67DF01002C5BCB /* MenuViewController.swift */; };
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
@@ -42,10 +45,14 @@
 		BFE7130A1C655E2D002C5BCB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BFE7130C1C656E6A002C5BCB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BFE7130D1C656E6A002C5BCB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		BFE713121C66A159002C5BCB /* PointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsViewController.h; sourceTree = "<group>"; };
-		BFE713131C66A159002C5BCB /* PointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsViewController.m; sourceTree = "<group>"; };
 		BFE713151C67457A002C5BCB /* Game-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFE713161C67457A002C5BCB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BFE713191C678F37002C5BCB /* IALabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IALabel.h; sourceTree = "<group>"; };
+		BFE7131A1C678F37002C5BCB /* IALabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IALabel.m; sourceTree = "<group>"; };
+		BFE7131C1C67B4C3002C5BCB /* IAPointsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IAPointsCell.xib; sourceTree = "<group>"; };
+		BFE7131E1C67B730002C5BCB /* IAPointsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPointsCellView.h; sourceTree = "<group>"; };
+		BFE7131F1C67B730002C5BCB /* IAPointsCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPointsCellView.m; sourceTree = "<group>"; };
+		BFE713211C67DF01002C5BCB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
@@ -99,12 +106,23 @@
 				BFE712DF1C6516DA002C5BCB /* PhotoTakeViewController.m */,
 				BFE7130C1C656E6A002C5BCB /* LoginViewController.h */,
 				BFE7130D1C656E6A002C5BCB /* LoginViewController.m */,
-				BFE713121C66A159002C5BCB /* PointsViewController.h */,
-				BFE713131C66A159002C5BCB /* PointsViewController.m */,
 				BFE713161C67457A002C5BCB /* TableViewController.swift */,
 				BFE713151C67457A002C5BCB /* Game-Bridging-Header.h */,
+				BFE713211C67DF01002C5BCB /* MenuViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		BFE713181C678EDD002C5BCB /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				BFE713191C678F37002C5BCB /* IALabel.h */,
+				BFE7131A1C678F37002C5BCB /* IALabel.m */,
+				BFE7131C1C67B4C3002C5BCB /* IAPointsCell.xib */,
+				BFE7131E1C67B730002C5BCB /* IAPointsCellView.h */,
+				BFE7131F1C67B730002C5BCB /* IAPointsCellView.m */,
+			);
+			name = CustomView;
 			sourceTree = "<group>";
 		};
 		BFE836C11C60BD3E00AA504D /* Model */ = {
@@ -149,6 +167,7 @@
 		BFFAFD1F1C5FB8BD00E58E9A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				BFE713181C678EDD002C5BCB /* CustomView */,
 				BFE712DD1C651444002C5BCB /* ViewController */,
 				BFE7F8FF1C6382450037A5A6 /* stars.atlas */,
 				BFE836CF1C62CC8E00AA504D /* spirit.atlas */,
@@ -241,6 +260,7 @@
 				BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */,
 				BFE836CE1C62315D00AA504D /* RcArrb4cL.jpg in Resources */,
 				BFE836D21C62D28C00AA504D /* maxresdefault.jpg in Resources */,
+				BFE7131D1C67B4C3002C5BCB /* IAPointsCell.xib in Resources */,
 				BFE836D01C62CC8E00AA504D /* spirit.atlas in Resources */,
 				BFE7F9091C63DE830037A5A6 /* wheel.png in Resources */,
 				BFFAFD301C5FB8BD00E58E9A /* Main.storyboard in Resources */,
@@ -254,13 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */,
 				BFE713171C67457A002C5BCB /* TableViewController.swift in Sources */,
 				BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */,
 				BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */,
+				BFE7131B1C678F37002C5BCB /* IALabel.m in Sources */,
 				BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */,
 				BFFAFD2D1C5FB8BD00E58E9A /* GameViewController.m in Sources */,
 				BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */,
+				BFE713221C67DF01002C5BCB /* MenuViewController.swift in Sources */,
 				BFE836C41C60BE9400AA504D /* IAPlayer.m in Sources */,
 				BFFAFD251C5FB8BD00E58E9A /* AppDelegate.m in Sources */,
 				BFE7F9071C63DA530037A5A6 /* IAObtacle.m in Sources */,
@@ -268,6 +289,7 @@
 				BFFAFD281C5FB8BD00E58E9A /* GameScene.m in Sources */,
 				BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */,
 				BFFAFD221C5FB8BD00E58E9A /* main.m in Sources */,
+				BFE713201C67B730002C5BCB /* IAPointsCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

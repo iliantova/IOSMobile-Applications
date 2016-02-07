@@ -23,6 +23,8 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 static const uint32_t groundCategory = 0x1 << 2;
 static const uint32_t starsCategori = 0x1 << 3;
 
+ SKSpriteNode *picture;
+
 
 +(id)player
 {
@@ -43,24 +45,32 @@ static const uint32_t starsCategori = 0x1 << 3;
 
     
     UIImage *imageFromDB = [self takeUserPicture];
-    
-    SKTexture *userPicture = [SKTexture textureWithImage:imageFromDB];
-    //SKTexture *userPicture = [SKTexture textureWithImageNamed:@"puddle.png"];
-    SKSpriteNode *picture = [SKSpriteNode spriteNodeWithTexture:userPicture size:CGSizeMake(60, 60)];
-    picture.position = CGPointMake(0, picture.frame.size.height/2);
-    //picture.zPosition = 50;
-    
-    SKCropNode* cropNode = [SKCropNode node];
-    SKShapeNode* mask = [SKShapeNode node];
-    [mask setPath:CGPathCreateWithRoundedRect(CGRectMake(-30, 0, 60, 60), 30, 30, nil)];
-    
-    [mask setFillColor:[SKColor whiteColor]];
-    cropNode.zPosition = 100;
-    [cropNode setMaskNode:mask];
-    [cropNode addChild:picture];
-    
+    if (imageFromDB) {
+        
+        SKCropNode* cropNode = [SKCropNode node];
+        SKShapeNode* mask = [SKShapeNode node];
+        [mask setPath:CGPathCreateWithRoundedRect(CGRectMake(-30, 0, 60, 60), 30, 30, nil)];
+        
+        [mask setFillColor:[SKColor whiteColor]];
+        cropNode.zPosition = 100;
+        [cropNode setMaskNode:mask];
+        if (picture) {
+            
+            [cropNode delete:picture];
 
-    [player addChild:cropNode];
+        }
+        
+        SKTexture *userPicture = [SKTexture textureWithImage:imageFromDB];
+        //SKTexture *userPicture = [SKTexture textureWithImageNamed:@"puddle.png"];
+        picture = [SKSpriteNode spriteNodeWithTexture:userPicture size:CGSizeMake(60, 60)];
+        picture.position = CGPointMake(0, picture.frame.size.height/2);
+        //picture.zPosition = 50;
+       
+        [cropNode addChild:picture];
+        [player addChild:cropNode];
+    }
+    
+    
     player.name = @"player";
     player.zPosition = 15;
     player.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(player.size.width -6, player.size.height - 6)];

@@ -17,11 +17,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.registerNib(UINib(nibName: "IAPointsCell", bundle: nil), forCellReuseIdentifier: "CellPoints")
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,12 +36,13 @@ class TableViewController: UITableViewController {
         }
         for var i = 0; i < self.skor.count; i++
         {
-            let city = self.skor[i];
+            let skorAll = self.skor[i];
             let nikName = (UIApplication.sharedApplication().delegate as! AppDelegate).nikNameData;
-            let name = city.valueForKey("userPoints") as! NSManagedObject;
+            
+            let name = skorAll.valueForKey("userPoints") as! NSManagedObject;
             let user = name.valueForKey("nikName") as! String;
             if (user == nikName) {
-                curentUserScor.append(city);
+                curentUserScor.append(skorAll);
             }
 
         }
@@ -70,14 +68,22 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TheCell")
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier("CellPoints", forIndexPath: indexPath) as! IAPointsCellView
+
+        
+        //let cell = tableView.dequeueReusableCellWithIdentifier("TheCell")
         
         let curenRowPoints = curentUserScor[indexPath.row];
         let data = curenRowPoints.valueForKey("data") as! String;
         let pointValue = curenRowPoints.valueForKey("points") as! String;
-      cell?.textLabel!.text = "Points: \(pointValue)              \(data)"
+        cell.pointLabel!.text = "POINTS  \(pointValue)";
+        cell.dataLabel!.text = data;
         
-        return cell!;
+        //"Points: \(pointValue)              \(data)"
+        
+        return cell;
     }
     
     lazy var managedContext: NSManagedObjectContext = {

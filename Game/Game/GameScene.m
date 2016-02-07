@@ -10,6 +10,7 @@
 #import "IAPlayer.h"
 #import "IAWorldGenerator.h"
 #import "IAPointLabel.h"
+#import "IALabel.h"
 
 @interface GameScene()
 
@@ -109,8 +110,7 @@
     
     [player stop];
     
-    SKLabelNode *gameOverNode = [SKLabelNode labelNodeWithFontNamed:@"Verdana"];
-    gameOverNode.text = @"Over";
+    IALabel *gameOverNode = [IALabel labelNodeWithText: @"Game Over"];
     gameOverNode.position = CGPointMake(0, 60);
     [self addChild:gameOverNode];
     
