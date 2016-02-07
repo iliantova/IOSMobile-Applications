@@ -12,6 +12,7 @@
 		BFE7130B1C655E2D002C5BCB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE713091C655E2D002C5BCB /* Model.xcdatamodeld */; };
 		BFE7130E1C656E6A002C5BCB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7130D1C656E6A002C5BCB /* LoginViewController.m */; };
 		BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE713131C66A159002C5BCB /* PointsViewController.m */; };
+		BFE713171C67457A002C5BCB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE713161C67457A002C5BCB /* TableViewController.swift */; };
 		BFE7F8FE1C636B490037A5A6 /* IAStars.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F8FD1C636B490037A5A6 /* IAStars.m */; };
 		BFE7F9001C6382450037A5A6 /* stars.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F8FF1C6382450037A5A6 /* stars.atlas */; };
 		BFE7F9021C63B52C0037A5A6 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFE7F9011C63B52C0037A5A6 /* images.jpeg */; };
@@ -43,6 +44,8 @@
 		BFE7130D1C656E6A002C5BCB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BFE713121C66A159002C5BCB /* PointsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsViewController.h; sourceTree = "<group>"; };
 		BFE713131C66A159002C5BCB /* PointsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsViewController.m; sourceTree = "<group>"; };
+		BFE713151C67457A002C5BCB /* Game-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFE713161C67457A002C5BCB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BFE7F8FC1C636B490037A5A6 /* IAStars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAStars.h; sourceTree = "<group>"; };
 		BFE7F8FD1C636B490037A5A6 /* IAStars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAStars.m; sourceTree = "<group>"; };
 		BFE7F8FF1C6382450037A5A6 /* stars.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = stars.atlas; path = ../../../../stars.atlas; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				BFE7130D1C656E6A002C5BCB /* LoginViewController.m */,
 				BFE713121C66A159002C5BCB /* PointsViewController.h */,
 				BFE713131C66A159002C5BCB /* PointsViewController.m */,
+				BFE713161C67457A002C5BCB /* TableViewController.swift */,
+				BFE713151C67457A002C5BCB /* Game-Bridging-Header.h */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE713141C66A159002C5BCB /* PointsViewController.m in Sources */,
+				BFE713171C67457A002C5BCB /* TableViewController.swift in Sources */,
 				BFE836CC1C61558C00AA504D /* IAPointLabel.m in Sources */,
 				BFE836C91C60FF8100AA504D /* IAWorldGenerator.m in Sources */,
 				BFE712E01C6516DA002C5BCB /* PhotoTakeViewController.m in Sources */,
@@ -371,10 +377,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Game/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ObjectivC.Game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Game/Game-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -382,10 +391,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Game/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ObjectivC.Game;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Game/Game-Bridging-Header.h";
 			};
 			name = Release;
 		};

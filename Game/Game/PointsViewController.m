@@ -65,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return userPonts.count;
+    return 1; //userPonts.count;
 }
 
 
@@ -78,37 +78,32 @@
     if(cell == nil) {
         cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellM];
     }
-    
-    NSManagedObject *curentPoint = [userPonts.allObjects objectAtIndex:indexPath.row];
+    NSArray *aa= userPonts.allObjects;
+    NSManagedObject *curentPoint = [aa objectAtIndex:indexPath.row];
     
     AppDelegate *cdHelper = [[AppDelegate alloc] init];
     
     NSManagedObjectContext *context = [cdHelper managedObjectContext];
     
-   NSError *error;
+    NSError *error;
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"ScorPoint" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
 
-    NSArray *fetchedObjects4 = [context executeFetchRequest:fetchRequest error:&error];
-    for (NSManagedObject *info in fetchedObjects4) {
-       NSString *pointsuser = [info valueForKey:@"points"];
-        }
+   //NSString *points = [curentPoint valueForKey:@"points"];
+    NSString *pointsuser = [curentPoint valueForKey:@"points"];
     
+    NSLog(pointsuser);
     
-    
-    
-   //NSString *pointsuser = [curentPoint valueForKey:@"points"];
-    
-//NSString *data = [NSDateFormatter localizedStringFromDate:[curentPoint valueForKey:@"data"]
-                                                          //dateStyle:NSDateFormatterShortStyle
-                                                        // timeStyle:NSDateFormatterFullStyle];
+   NSString *data = [NSDateFormatter localizedStringFromDate:[curentPoint valueForKey:@"data"]
+                                                          dateStyle:NSDateFormatterShortStyle
+                                                         timeStyle:NSDateFormatterFullStyle];
     //NSString *points = @"RAbotq";
     //NSString *data = @"I oshte kak";
     
     
-    cell.textLabel.text = @"da";//[NSString stringWithFormat:@"%@", @"da"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", pointsuser, data];
     
     return cell;
 }

@@ -57,30 +57,20 @@
                                  insertNewObjectForEntityForName:@"ScorPoint"
                                  inManagedObjectContext:context];
 
+    NSString *n = [NSString stringWithFormat:@"%i", points];
+    [pointSet setValue:n forKey:@"points"];
     
-    [pointSet setValue:[NSString stringWithFormat:@"%i", points] forKey:@"points"];
-    [pointSet setValue: [[NSString alloc] initWithData:[NSData data] encoding:NSUTF8StringEncoding] forKey:@"data"];
+    NSDate *currDate = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"dd.MM.YY HH:mm:ss"];
+    NSString *dateString = [dateFormatter stringFromDate:currDate];
+    [pointSet setValue: dateString forKey:@"data"];
     [pointSet setValue:curentUser forKey:@"userPoints"];
-    //[curentUser setValue:pointSet forKeyPath:@"pointsScor"];
+    
     
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
-    
-    
-    
-        NSEntityDescription *entitys = [NSEntityDescription
-                                       entityForName:@"ScorPoint" inManagedObjectContext:context];
-        [fetchRequest setEntity:entitys];
-        
-        NSArray *fetchedObjects4 = [context executeFetchRequest:fetchRequest error:&error];
-        for (NSManagedObject *info in fetchedObjects4) {
-            NSString *pointsuser = [info valueForKey:@"points"];
-        }
-        
-    //self.number = points;
-    //self. text = [NSString stringWithFormat:@"%i", self.number];
-    
     
 }
 
