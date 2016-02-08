@@ -20,11 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    UIImage *imageUser = [IAPlayer takeUserPicture];
     
+    
+    UIImage *imageUser = [IAPlayer takeUserPicture];
     self.imageView.image = imageUser;
     
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"girl.png"]];
     
 }
 

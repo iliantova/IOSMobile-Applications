@@ -70,7 +70,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("CellPoints", forIndexPath: indexPath) as! IAPointsCellView
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellPoints", forIndexPath: indexPath) as! IAPointsCellView
 
         
         //let cell = tableView.dequeueReusableCellWithIdentifier("TheCell")

@@ -23,7 +23,7 @@ static const uint32_t obstacleCategory = 0x1 << 1;
 static const uint32_t groundCategory = 0x1 << 2;
 static const uint32_t starsCategori = 0x1 << 3;
 
- SKSpriteNode *picture;
+SKSpriteNode *picture;
 
 
 +(id)player
