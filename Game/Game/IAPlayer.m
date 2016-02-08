@@ -54,11 +54,9 @@ SKSpriteNode *picture;
         [mask setFillColor:[SKColor whiteColor]];
         cropNode.zPosition = 100;
         [cropNode setMaskNode:mask];
-        if (picture) {
-            
-            [cropNode delete:picture];
-
-        }
+        //if (picture) {
+        //[cropNode delete:picture];
+        //}
         
         SKTexture *userPicture = [SKTexture textureWithImage:imageFromDB];
         //SKTexture *userPicture = [SKTexture textureWithImageNamed:@"puddle.png"];
