@@ -81,14 +81,14 @@ SKSpriteNode *picture;
 }
 
 -(void)start {
-    SKAction *incrementsMove = [SKAction moveByX:1.0 y:0 duration:0.007];
+    SKAction *incrementsMove = [SKAction moveByX:1.0 y:0 duration:0.005];
     SKAction *move = [SKAction repeatActionForever:incrementsMove];
     [self runAction:move];
 }
 
 -(void)jump {
     if (!self.isJump) {
-        [self.physicsBody applyImpulse:CGVectorMake(0, 110)];
+        [self.physicsBody applyImpulse:CGVectorMake(10, 100)];
         self.isJump = YES;
     }
 }
